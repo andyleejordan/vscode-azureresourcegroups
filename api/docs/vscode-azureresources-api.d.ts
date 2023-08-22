@@ -38,6 +38,7 @@ export declare namespace apiUtils {
  */
 export declare enum AzExtResourceType {
     AppServices = "AppServices",
+    ArcServers = "ArcServers",
     AzureCosmosDb = "AzureCosmosDb",
     ContainerApps = "ContainerApps",
     ContainerAppsEnvironment = "ContainerAppsEnvironment",
@@ -442,4 +443,4 @@ export declare interface Wrapper {
     unwrap<T>(): T;
 }
 
-export { }
+export { };

@@ -62,7 +62,8 @@ export const azureExtensions: IAzExtMetadata[] = [
         name: 'vscode-azurevirtualmachines',
         label: 'Virtual Machines',
         resourceTypes: [
-            AzExtResourceType.VirtualMachines
+            AzExtResourceType.VirtualMachines,
+            AzExtResourceType.ArcServers
         ],
         reportIssueCommandId: 'azureVirtualMachines.reportIssue'
     },
@@ -113,6 +114,7 @@ export const legacyTypeMap: Partial<Record<AzExtResourceType, string>> = {
     AppServices: 'microsoft.web/sites',
     StaticWebApps: 'microsoft.web/staticsites',
     VirtualMachines: 'microsoft.compute/virtualmachines',
+    ArcServers: 'microsoft.hybridcompute/machines',
     AzureCosmosDb: 'microsoft.documentdb/databaseaccounts',
     PostgresqlServersStandard: 'microsoft.dbforpostgresql/servers',
     PostgresqlServersFlexible: 'microsoft.dbforpostgresql/flexibleservers',

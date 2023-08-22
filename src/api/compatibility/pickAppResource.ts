@@ -11,7 +11,8 @@ import { ext } from "../../extensionVariables";
 export function createCompatibilityPickAppResource() {
     return async function pickAppResource<T extends AzExtTreeItem>(context: ITreeItemPickerContext, options?: PickAppResourceOptions): Promise<T> {
         const result = await PickTreeItemWithCompatibility.resource<T>(context, ext.v2.api.resources.azureResourceTreeDataProvider, {
-            resourceTypes: convertAppResourceFilterToAzExtResourceType(options?.filter),
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+            resourceTypes: convertAppResourceFilterToAzExtResourceType(options?.filter) as any,
             childItemFilter: convertExpectedChildContextValueToContextValueFilter(options?.expectedChildContextValue)
         });
 
